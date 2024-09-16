@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "start": "node sammy.js; serve -s _static -l tcp://0.0.0.0:${PORT:-8081} -n",
     "build:digitalocean": "npm install --include=dev && npm run build && npm ci",
     "lint": "vue-cli-service lint"
   },
